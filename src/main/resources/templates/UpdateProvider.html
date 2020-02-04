@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="updateProvider" method="post">
+    <input type="hidden" name="id"  th:value="${UserUpdate.getId()}"/>
+    <table>
+               <tr><td ><input id="UserCode" name="UserCode" th:value="${UserUpdate.getUserCode()}"/></td> </tr>
+               <tr><td ><input id="UserName" name="UserName" th:value="${UserUpdate.getUserName()}"/></td> </tr>
+               <tr><td ><textarea  id="UserPassword" name="UserPassword" th:text="${UserUpdate.getUserPassword()}"></textarea> </td> </tr>
+              <tr>
+                  <td>
+                      <input type="submit"/>
+                      <input type="reset"/>
+                  </td>
+              </tr>
+    </table>
+</form>
+</body>
+</html>

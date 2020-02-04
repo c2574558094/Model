@@ -1,0 +1,38 @@
+
+# 设置JSP 路径 mvc
+#数据源的配置datasource
+#静态资源 ;static-path-pattern: /static/**
+#cache 关闭缓存
+# mode 模板模式
+# encoding 字符编码集
+# 页面内容类型
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/smbms
+    username: root
+    password: rootroot
+  thymeleaf:
+    cache: false
+    mode: HTML5
+    encoding: utf-8
+    servlet:
+      content-type: text/html
+#  mvc:
+#    static-path-pattern: /static/**
+# 设置项目端口号port
+# 项目名称 context-path
+server:
+  port: 8080
+  servlet:
+    context-path: /
+##配置myBatis的映射文件
+##给实体类起别名
+##引入mapper映射文件
+mybatis:
+  type-aliases-package: com.cjw.pojo
+  mapper-locations: classpath:mapper/*.xml
+
+
+
+
