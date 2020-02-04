@@ -61,7 +61,6 @@ public class ProviderController {
     public  String update(@RequestParam("id") Integer id,Model model){
         SmbmsUser smbmsUser = userService.queryProvider(id);
         model.addAttribute("UserUpdate",smbmsUser);
-		system.out.println("hahaha");
         return "UpdateProvider";
 
     }
